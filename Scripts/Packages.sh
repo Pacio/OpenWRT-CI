@@ -126,6 +126,6 @@ rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2sock
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
 rm -rf feeds/luci/applications/luci-app-passwall
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
-rm -rf ../feeds/luci/applications/luci-app-{dae*}
-rm -rf ../feeds/packages/net/{dae*}
+rm -rf feeds/luci/applications/luci-app-{dae*}
+rm -rf feeds/packages/net/{dae*}
 git clone https://github.com/QiuSimons/luci-app-daed package/dae
