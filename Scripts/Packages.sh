@@ -120,6 +120,7 @@ UPDATE_VERSION() {
 UPDATE_VERSION "sing-box"
 #UPDATE_VERSION "tailscale"
 
+git clone https://github.com/QiuSimons/luci-app-daed package/dae
 git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman package/podman
 ./scripts/feeds install -a
 rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
