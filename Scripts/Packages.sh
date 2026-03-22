@@ -51,6 +51,8 @@ UPDATE_PACKAGE "aurora-config" "eamonxg/luci-app-aurora-config" "master"
 UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "master"
 UPDATE_PACKAGE "kucat-config" "sirpdboy/luci-app-kucat-config" "master"
 
+UPDATE_PACKAGE "podman" "breeze303/openwrt-podman" "main"
+UPDATE_PACKAGE "daed" "QiuSimons/luci-app-daed" "kix"
 UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "main"
 UPDATE_PACKAGE "momo" "nikkinikki-org/OpenWrt-momo" "main"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
@@ -119,12 +121,3 @@ UPDATE_VERSION() {
 #UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
 UPDATE_VERSION "sing-box"
 #UPDATE_VERSION "tailscale"
-
-git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman package/podman
-./scripts/feeds install -a
-rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,daed,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
-git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
-rm -rf feeds/luci/applications/luci-app-passwall
-git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
-rm -rf feeds/luci/applications/luci-app-daed
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
