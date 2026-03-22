@@ -127,4 +127,3 @@ git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-
 rm -rf feeds/luci/applications/luci-app-daed
 git clone https://github.com/QiuSimons/luci-app-daed package/dae
 git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman package/podman
-./scripts/feeds install -a
