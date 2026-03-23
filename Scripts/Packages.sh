@@ -120,10 +120,12 @@ UPDATE_VERSION() {
 UPDATE_VERSION "sing-box"
 #UPDATE_VERSION "tailscale"
 
-rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,daed,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
+rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2socks,hysteria,ipt2socks,microsocks,naiveproxy,shadowsocks-libev,shadowsocks-rust,shadowsocksr-libev,simple-obfs,tcping,trojan-plus,tuic-client,v2ray-plugin,xray-plugin,geoview,shadow-tls}
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
 rm -rf feeds/luci/applications/luci-app-passwall
 git clone https://github.com/Openwrt-Passwall/openwrt-passwall package/passwall-luci
-rm -rf feeds/luci/applications/luci-app-daed
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
 git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman package/podman
+rm -rf ../feeds/luci/applications/luci-app-{dae*}
+rm -rf ../feeds/packages/net/{dae*}
+git clone https://github.com/QiuSimons/luci-app-daed package/dae
+mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
