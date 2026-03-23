@@ -74,7 +74,6 @@ function cat_ebpf_config() {
 #ebpf相关
   cat >> .config <<EOF
 # eBPF
-CONFIG_DEVEL=y
 # 生成内核调试信息 可选，daed可能需要
 CONFIG_KERNEL_DEBUG_INFO=y
 # 不使用简化调试信息 配合DEBUG_INFO=y使用
