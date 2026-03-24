@@ -76,23 +76,14 @@ function cat_ebpf_config() {
 # eBPF
 # 生成内核调试信息 可选，daed可能需要
 CONFIG_KERNEL_DEBUG_INFO=y
-# 不使用简化调试信息 配合DEBUG_INFO=y使用
 CONFIG_KERNEL_DEBUG_INFO_REDUCED=n
-# 开启BTF支持 必选 ，现代eBPF程序依赖BTF
 CONFIG_KERNEL_DEBUG_INFO_BTF=y
-# 开启cgroups支持 必选 ，cgroup BPF依赖
-CONFIG_KERNEL_CGROUPS=y1
-# 开启cgroup BPF挂载点 必选 ，daed可能使用cgroup BPF
+CONFIG_KERNEL_CGROUPS=y
 CONFIG_KERNEL_CGROUP_BPF=y
-# 开启BPF事件支持 可选，用于BPF程序事件监控
 CONFIG_KERNEL_BPF_EVENTS=y
-# 使用主机BPF工具链 建议开启，提高编译效率
 CONFIG_BPF_TOOLCHAIN_HOST=y
-# 开启XDP套接字 必选 ，daed可能使用XDP加速
 CONFIG_KERNEL_XDP_SOCKETS=y
-# XDP套接字诊断模块 可选，用于调试XDP套接字
 CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
-
 # 为了完整支持daed的eBPF功能，建议补充以下配置：
 # 启用BPF JIT编译器（显著提升eBPF性能）
 CONFIG_KERNEL_BPF_JIT=y
