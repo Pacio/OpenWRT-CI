@@ -122,5 +122,5 @@ cat_ebpf_config
 
 # BPFtool 支持 eBPF 程序 反汇编（disassembly）
 echo "CONFIG_PACKAGE_bpftool-full=y" >> ./.config
-echo "CONFIG_PACKAGE_zoneinfo-all=y" >> ./.config
+echo "CONFIG_PACKAGE_zoneinfo-asia=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-daed=y" >> ./.config
