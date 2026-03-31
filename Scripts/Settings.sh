@@ -70,48 +70,29 @@ fi
 #	echo "CONFIG_PACKAGE_kmod-usb-serial-qualcomm=y" >> ./.config
 #fi
 
-function cat_ebpf_config() {
+#function cat_ebpf_config() {
 #ebpf相关
-  cat >> .config <<EOF
+#  cat >> .config <<EOF
 # eBPF
 # 生成内核调试信息 可选，daed可能需要
-CONFIG_KERNEL_DEBUG_INFO=y
-CONFIG_KERNEL_DEBUG_INFO_REDUCED=n
-CONFIG_KERNEL_DEBUG_INFO_BTF=y
-CONFIG_KERNEL_CGROUPS=y
-CONFIG_KERNEL_CGROUP_BPF=y
-CONFIG_KERNEL_BPF_EVENTS=y
-CONFIG_BPF_TOOLCHAIN_HOST=y
-CONFIG_KERNEL_XDP_SOCKETS=y
-CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
+#CONFIG_KERNEL_DEBUG_INFO=y
+#CONFIG_KERNEL_DEBUG_INFO_REDUCED=n
+#CONFIG_KERNEL_DEBUG_INFO_BTF=y
+#CONFIG_KERNEL_CGROUPS=y
+#CONFIG_KERNEL_CGROUP_BPF=y
+#CONFIG_KERNEL_BPF_EVENTS=y
+#CONFIG_BPF_TOOLCHAIN_HOST=y
+#CONFIG_KERNEL_XDP_SOCKETS=y
+#CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
 # 为了完整支持daed的eBPF功能，建议补充以下配置：
 # 启用BPF JIT编译器（显著提升eBPF性能）
-CONFIG_KERNEL_BPF_JIT=y
-CONFIG_KERNEL_HAVE_BPF_JIT=y
-# # 启用BPF LSM（可选，取决于daed是否使用）
-# CONFIG_KERNEL_SECURITY_BPF=y
-# # 启用BPF系统调用
-# CONFIG_KERNEL_BPF_SYSCALL=y
-# # 启用BPF挂载点
-# CONFIG_KERNEL_BPF_LSM=y
-# CONFIG_KERNEL_BPF_PRELOAD=y
-# # 启用XDP支持（完整）
-# CONFIG_KERNEL_XDP=y
-# CONFIG_PACKAGE_kmod-ebpf-core=y
-# CONFIG_PACKAGE_kmod-ebpf-filter=y
-# CONFIG_PACKAGE_kmod-ebpf-testing=y
-# # 启用libbpf库（用户空间eBPF支持）
-# CONFIG_PACKAGE_libbpf=y
-# CONFIG_PACKAGE_libbpf-dev=y
-# # 启用cgroup相关BPF功能
-# CONFIG_KERNEL_CGROUP_BPF=y
-# CONFIG_KERNEL_CGROUP_NET_PRIO=y
-# CONFIG_KERNEL_CGROUP_NET_CLASSID=y
-EOF
-}
-cat_ebpf_config
+#CONFIG_KERNEL_BPF_JIT=y
+#CONFIG_KERNEL_HAVE_BPF_JIT=y
+#EOF
+#}
+#cat_ebpf_config
 
 # BPFtool 支持 eBPF 程序 反汇编（disassembly）
-echo "CONFIG_PACKAGE_bpftool-full=y" >> ./.config
-echo "CONFIG_PACKAGE_zoneinfo-asia=y" >> ./.config
-echo "CONFIG_PACKAGE_luci-app-daed=y" >> ./.config
+#echo "CONFIG_PACKAGE_bpftool-full=y" >> ./.config
+#echo "CONFIG_PACKAGE_zoneinfo-asia=y" >> ./.config
+#echo "CONFIG_PACKAGE_luci-app-daed=y" >> ./.config
